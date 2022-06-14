@@ -1,0 +1,12 @@
+{
+  "name": "webpack-mf",
+  "version": "1.0.0",
+  "main": "index.js",
+	"scripts": {
+    "serve": "pnpm --filter \"./packages/**\" dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
