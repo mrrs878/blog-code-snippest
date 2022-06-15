@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "rootDir": ".",
+    "paths": {
+      "remote/Header": ["./packages/remote/src/components/header/index.tsx"],
+      "host/Home": ["./packages/host/src/pages/home/index.tsx"],
+      "host/Profile": ["./packages/host/src/pages/profile/index.tsx"],
+      "host/About": ["./packages/host/src/pages/about/index.tsx"]
+    },
+    "moduleResolution": "Node",
+    "target": "es2016",
+    "jsx": "react",
+    "module": "esnext",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.d.ts"
+  ],
+  "files": []
+}

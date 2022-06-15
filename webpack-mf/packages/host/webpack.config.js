@@ -2,7 +2,7 @@
  * @Author: mrrs878@foxmail.com
  * @Date: 2022-06-13 15:32:48
  * @LastEditors: mrrs878@foxmail.com
- * @LastEditTime: 2022-06-14 19:40:07
+ * @LastEditTime: 2022-06-15 19:40:47
  */
 
 const { ModuleFederationPlugin } = require("webpack").container;
@@ -24,6 +24,10 @@ module.exports = {
         },
       },
       {
+        test: /.(ts)x?$/,
+        use: "ts-loader",
+      },
+      {
         test: /.css$/,
         use: ["style-loader", "css-loader"],
       },
@@ -37,9 +41,9 @@ module.exports = {
         remote: `remote@http://localhost:8081/remoteEntry.js`,
       },
       exposes: {
-        "./Profile": "./src/pages/profile/index.jsx",
-        "./About": "./src/pages/about/index.jsx",
-        "./Home": "./src/pages/home/index.jsx",
+        "./Profile": "./src/pages/profile/index.tsx",
+        "./About": "./src/pages/about/index.tsx",
+        "./Home": "./src/pages/home/index.tsx",
       },
       shared: {
         react: {
@@ -73,6 +77,6 @@ module.exports = {
     historyApiFallback: true,
   },
   resolve: {
-    extensions: [".jsx", ".js"],
+    extensions: [".jsx", ".js", ".tsx", ".ts"],
   },
 };

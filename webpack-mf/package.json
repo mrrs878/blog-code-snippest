@@ -2,11 +2,15 @@
   "name": "webpack-mf",
   "version": "1.0.0",
   "main": "index.js",
-	"scripts": {
-    "serve": "pnpm --filter \"./packages/**\" dev"
+  "scripts": {
+    "serve": "pnpm --parallel --filter \"./packages/**\" dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5"
+  }
 }

@@ -2,7 +2,7 @@
  * @Author: mrrs878@foxmail.com
  * @Date: 2022-06-13 15:32:48
  * @LastEditors: mrrs878@foxmail.com
- * @LastEditTime: 2022-06-14 19:28:16
+ * @LastEditTime: 2022-06-15 19:53:26
  */
 
 const { ModuleFederationPlugin } = require("webpack").container;
@@ -24,6 +24,10 @@ module.exports = {
         },
       },
       {
+        test: /.(ts)x?$/,
+        use: "ts-loader",
+      },
+      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
@@ -38,7 +42,7 @@ module.exports = {
       },
       exposes: {
         "./Button": "./src/components/button/index.jsx",
-        "./Header": "./src/components/header/index.jsx",
+        "./Header": "./src/components/header/index.tsx",
       },
       shared: {
         react: {
